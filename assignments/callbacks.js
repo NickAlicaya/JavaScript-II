@@ -72,14 +72,19 @@ multiplyNums(5, 3, product => {
 function contains(item, list, cb) {
 	// contains checks if an item is present inside of the given array/list.
 	// Pass true to the callback if it is, otherwise pass false.
-	let found = false;
-	for (let index = 0; index < list.length; index++) {
-		if (list[index] === item) {
-			found = true;
+	function contains(item, list, cb) {
+		if (list.includes(item)) {
+			return cb(true);
 		}
+		return cb(false);
 	}
-	cb(`It is ${found} that ${item} is part of the list`);
 
+	contains(3, [1, 2, 3], function(found) {
+		if (found) {
+			return "item is contained in the list";
+		}
+		return "item is not present in the list";
+	});
 	/* STRETCH PROBLEM */
 
 	function removeDuplicates(array, cb) {

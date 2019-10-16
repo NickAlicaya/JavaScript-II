@@ -497,5 +497,18 @@ runners.forEach(function(runner) {
 console.log(lastNameAndEmail);
 
 // Problem 2
+//Make a list of runners with corresponding details who donated over 100 dollars so the company can give them a special award.
+let donatedBig = runners.filter(runner => {
+	if (runner.donation >= 250) {
+		return runner.first_name;
+	}
+});
+console.log(donatedBig);
 
 // Problem 3
+//List runners first names and Age
+let firstNameAndCompany = [];
+runners.forEach(function(runner) {
+	firstNameAndCompany.push(`${runner.first_name} ${runner.company_name}`);
+});
+console.log(firstNameAndCompany);
