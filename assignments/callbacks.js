@@ -72,18 +72,13 @@ multiplyNums(5, 3, product => {
 function contains(item, list, cb) {
 	// contains checks if an item is present inside of the given array/list.
 	// Pass true to the callback if it is, otherwise pass false.
-	//   const IsIncluded = () =>{
-	// for (let i=0,; i < list.length; i++) {
-	//     if (list[i] === list) {
-	//       return true;
-	//     }
-	//     return false;
-	// };
-	//       cb(IsIncluded());
-	// };
-	// contains(list, "banana", check => {
-	//   console.log(check? `Banana is in the array.` : `Banana is not in the array.`);
-	// });
+	let found = false;
+	for (let index = 0; index < list.length; index++) {
+		if (list[index] === item) {
+			found = true;
+		}
+	}
+	cb(`It is ${found} that ${item} is part of the list`);
 
 	/* STRETCH PROBLEM */
 
