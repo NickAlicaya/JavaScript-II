@@ -63,7 +63,7 @@ sumNums(5, 3, sum => {
 	console.log(`The sum of is ${sum}.`);
 });
 function multiplyNums(x, y, cb) {
-	// multiplyNums multiplies two numbers and passes the result to the callback.
+	// multiplyNums multiplies two numbers and passes the result to the callback..
 	cb(x * y);
 }
 multiplyNums(5, 3, product => {
